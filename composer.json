@@ -1,0 +1,15 @@
+{
+  "require": {
+    "spiral/roadrunner": "^1.9",
+    "composer/package-versions-deprecated": "1.11.99.1",
+    "spiral/php-grpc": "^1.4",
+    "grpc/grpc": "^1.34"
+  },
+  "autoload": {
+    "psr-4": {
+      "service\\": "service",
+      "Dpl\\SimpleCache\\": "generated_classes/src/Dpl/SimpleCache",
+      "Dpl\\GPBMetadata\\": "generated_classes/src/Dpl/SimpleCache/Meta"
+    }
+  }
+}

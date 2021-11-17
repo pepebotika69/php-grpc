@@ -1,0 +1,24 @@
+version: '3.7'
+
+services:
+  dplgrpc-service:
+    container_name: dplgrpc-service
+    build:
+      dockerfile: Dockerfile-server
+      context: .
+    working_dir: /var/www
+    volumes:
+      - .:/var/www
+    ports:
+      - "9090:9090"
+    command: ./appserver/appserver serve -v -d
+
+  client-service:
+    container_name: client-service
+    build:
+      dockerfile: Dockerfile-client
+      context: .
+    working_dir: /var/www
+    volumes:
+      - .:/var/www
+    command: php test_client.php

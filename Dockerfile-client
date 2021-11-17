@@ -1,0 +1,25 @@
+FROM php:7.3-cli
+
+ARG PROTOBUF_VERSION=3.14.0
+ARG PHP_GRPC_VERSION=1.34.0
+
+# Utils
+RUN apt-get update
+RUN apt-get install unzip
+
+# grpc PHP (generate client)
+#RUN apt-get install php php-dev php-pear phpunit zlib1g-dev -y
+RUN apt-get install libz-dev  zlib1g-dev -y
+# видимо расширения для ПХП
+RUN pecl install grpc-${PHP_GRPC_VERSION}
+RUN pecl install protobuf-${PROTOBUF_VERSION}
+# Enable extensions
+RUN echo starting && \
+    docker-php-ext-enable grpc && \
+    docker-php-ext-enable protobuf
+
+RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+RUN php composer-setup.php
+RUN php -r "unlink('composer-setup.php');"
+RUN mv composer.phar /usr/local/bin/composer
+
