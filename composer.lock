@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2d332a7c8f5826312ecfb4bfb43d033d",
+    "content-hash": "ee2c4afe501424de4c73b8c2c84f4692",
     "packages": [
         {
             "name": "composer/package-versions-deprecated",
@@ -473,64 +473,6 @@
             "time": "2020-08-14T14:28:30+00:00"
         },
         {
-            "name": "spiral/php-grpc",
-            "version": "v1.5.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spiral/php-grpc.git",
-                "reference": "b09bb8d6773098ed649ea296abea55b40beea909"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/spiral/php-grpc/zipball/b09bb8d6773098ed649ea296abea55b40beea909",
-                "reference": "b09bb8d6773098ed649ea296abea55b40beea909",
-                "shasum": ""
-            },
-            "require": {
-                "ext-json": "*",
-                "google/protobuf": "^3.7",
-                "php": ">=7.2",
-                "spiral/roadrunner": "^1.8",
-                "symfony/polyfill-php73": "^1.22",
-                "symfony/polyfill-php80": "^1.22"
-            },
-            "require-dev": {
-                "jetbrains/phpstorm-attributes": "^1.0",
-                "phpunit/phpunit": "^8.5|^9.0",
-                "spiral/code-style": "^1.0",
-                "symfony/var-dumper": ">=4.4",
-                "vimeo/psalm": "^4.6"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Spiral\\GRPC\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Anton Titov / Wolfy-J",
-                    "email": "wolfy.jd@gmail.com"
-                }
-            ],
-            "description": "High-Performance GRPC server for PHP applications",
-            "support": {
-                "issues": "https://github.com/spiral/php-grpc/issues",
-                "source": "https://github.com/spiral/php-grpc/tree/v1.5.0"
-            },
-            "abandoned": "spiral/roadrunner-grpc",
-            "time": "2021-03-31T14:09:02+00:00"
-        },
-        {
             "name": "spiral/roadrunner",
             "version": "v1.9.2",
             "source": {
@@ -587,6 +529,63 @@
                 "source": "https://github.com/spiral/roadrunner/tree/v1.9.2"
             },
             "time": "2021-01-14T16:04:43+00:00"
+        },
+        {
+            "name": "spiral/roadrunner-grpc",
+            "version": "v1.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spiral/roadrunner-grpc.git",
+                "reference": "b09bb8d6773098ed649ea296abea55b40beea909"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spiral/roadrunner-grpc/zipball/b09bb8d6773098ed649ea296abea55b40beea909",
+                "reference": "b09bb8d6773098ed649ea296abea55b40beea909",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "google/protobuf": "^3.7",
+                "php": ">=7.2",
+                "spiral/roadrunner": "^1.8",
+                "symfony/polyfill-php73": "^1.22",
+                "symfony/polyfill-php80": "^1.22"
+            },
+            "require-dev": {
+                "jetbrains/phpstorm-attributes": "^1.0",
+                "phpunit/phpunit": "^8.5|^9.0",
+                "spiral/code-style": "^1.0",
+                "symfony/var-dumper": ">=4.4",
+                "vimeo/psalm": "^4.6"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spiral\\GRPC\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Anton Titov / Wolfy-J",
+                    "email": "wolfy.jd@gmail.com"
+                }
+            ],
+            "description": "High-Performance GRPC server for PHP applications",
+            "support": {
+                "issues": "https://github.com/spiral/roadrunner-grpc/issues",
+                "source": "https://github.com/spiral/roadrunner-grpc/tree/v1.5.0"
+            },
+            "time": "2021-03-31T14:09:02+00:00"
         },
         {
             "name": "symfony/console",
