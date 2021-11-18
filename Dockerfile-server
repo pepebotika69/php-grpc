@@ -33,9 +33,13 @@ RUN git clone https://github.com/spiral/php-grpc.git
 RUN cd php-grpc/cmd/rr-grpc && go install
 RUN cd php-grpc/cmd/protoc-gen-php-grpc && go install
 
+ENV PATH "/protobuf/bin:${PATH}"
+
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 RUN php composer-setup.php
 RUN php -r "unlink('composer-setup.php');"
 RUN mv composer.phar /usr/local/bin/composer
 
-ENV PATH "/protobuf/bin:${PATH}"
+#COPY . /var/www
+#WORKDIR /var/www
+#RUN composer update

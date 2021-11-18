@@ -21,10 +21,4 @@ proto:
 build-appserver-server: appserver/appserver
 # actual rule with dependencies on any `go` file within `appserver/*` being updated
 appserver/appserver: $(wildcard appserver/**/*.go) $(wildcard appserver/*.go)
-	docker-compose run dplgrpc-service make appserver_from_within_container
-appserver_from_within_container:
-	mkdir appserver \
-	&& go mod init github.com/khepin/rr-appserver \
-	&& touch main.go \
-	&& cd appserver \
-	&& go build -o appserver
+	docker-compose run dplgrpc-service
