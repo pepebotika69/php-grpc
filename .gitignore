@@ -1,2 +1,7 @@
 /.idea/
 /vendor/
+/appserver/appserver
+/appserver/go.mod
+/appserver/go.sum
+/appserver/main.go
+/composer.phar
